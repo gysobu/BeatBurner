@@ -9,6 +9,7 @@
 }
 
 /* Dashboard.ejs CSS */
+
 .total-calories-text {
     margin-top: -80px;
     margin-left: 50px;
@@ -35,20 +36,92 @@
     display: flex;
 }
 
-.playlist-options button {
-    margin-top: 20px;
-    margin-left: auto;
-    padding: 8px 14px;
-    letter-spacing: 1px;
-    background: #eb6a2f;
-    border-radius: 3px;
-    color: #fff;
-    border: 1px solid #eb6a2f;
+.warm-up {
+    background-color: #eb6a2f;
+    width: 130px;
+    height: 30px;
+    color: white;
+    outline: none;
+    font-size: 16px;
     font-weight: 300;
-    font-size: 14px;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 35px;
     justify-content: center;
-    display: flex;
+    text-align: center;
+    align-items: center;
 }
+
+.easy {
+    background-color: #27da5c;
+    width: 130px;
+    height: 30px;
+    color: white;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 35px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.medium {
+    background-color: #d7eb22;
+    width: 130px;
+    height: 30px;
+    color: white;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 35px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.hard {
+    background-color: #f31515;
+    width: 130px;
+    height: 30px;
+    color: white;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 35px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.block-display warm-up .block-display easy .block-display medium .block-display hard{
+    margin-bottom: 5px;
+    display: block;
+}
+
+.block-display {
+    margin-top: 40px;
+    margin-bottom: -30px;
+}
+
 
 .description {
     float: left;
@@ -103,7 +176,6 @@ form {
     -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, .075);
 }
 
-
 /* ============ LABEL =========== */
 
 label {
@@ -135,15 +207,9 @@ label {
     margin-left: -10px
 }
 
-
 /* ============ INPUT =========== */
 
-input[type=email],
-input[type=text],
-input[type=datepicker],
-input[type=textarea],
-input[type=password],
-input[type=number] {
+input[type=email], input[type=text], input[type=datepicker], input[type=textarea], input[type=password], input[type=number] {
     position: relative;
     z-index: 2;
     margin-bottom: 30px;
@@ -163,35 +229,13 @@ input[type=number] {
     font-weight: 100;
 }
 
-input[type=email].input-active,
-input[type=email]:focus,
-input[type=text].input-active,
-input[type=text]:focus,
-input[type=datepicker].input-active,
-input[type=datepicker]:focus,
-input[type=textarea].input-active,
-input[type=textarea]:focus,
-input[type=password].input-active,
-input[type=password]:focus,
-input[type=number].input-active,
-input[type=number]:focus {
+input[type=email].input-active, input[type=email]:focus, input[type=text].input-active, input[type=text]:focus, input[type=datepicker].input-active, input[type=datepicker]:focus, input[type=textarea].input-active, input[type=textarea]:focus, input[type=password].input-active, input[type=password]:focus, input[type=number].input-active, input[type=number]:focus {
     background-position: 0 0;
     box-shadow: none;
     outline: 0;
 }
 
-input[type=email].input-active,
-input[type=email]:focus:after,
-input[type=text].input-active,
-input[type=text]:focus:after,
-input[type=datepicker].input-active,
-input[type=datepicker]:focus:after,
-input[type=textarea].input-active,
-input[type=textarea]:focus:after,
-input[type=password].input-active,
-input[type=password]:focus:after,
-input[type=number].input-active,
-input[type=number]:focus:after {
+input[type=email].input-active, input[type=email]:focus:after, input[type=text].input-active, input[type=text]:focus:after, input[type=datepicker].input-active, input[type=datepicker]:focus:after, input[type=textarea].input-active, input[type=textarea]:focus:after, input[type=password].input-active, input[type=password]:focus:after, input[type=number].input-active, input[type=number]:focus:after {
     position: relative;
     z-index: 2;
     margin-bottom: 30px;
@@ -211,17 +255,11 @@ input[type=number]:focus:after {
     font-weight: 100;
 }
 
-input[type=email]::-webkit-input-placeholder,
-input[type=text]::-webkit-input-placeholder,
-input[type=datepicker]::-webkit-input-placeholder,
-input[type=textarea]::-webkit-input-placeholder,
-input[type=password]::-webkit-input-placeholder,
-input[type=number]::-webkit-input-placeholder {
+input[type=email]::-webkit-input-placeholder, input[type=text]::-webkit-input-placeholder, input[type=datepicker]::-webkit-input-placeholder, input[type=textarea]::-webkit-input-placeholder, input[type=password]::-webkit-input-placeholder, input[type=number]::-webkit-input-placeholder {
     transition: all .2s cubic-bezier(.64, .09, .08, 1);
 }
 
-input[type=radio]:after,
-input[type=radio]:before {
+input[type=radio]:after, input[type=radio]:before {
     content: '';
     position: absolute;
     transition: all .3s cubic-bezier(.64, .09, .08, 1)
@@ -313,9 +351,7 @@ input[type=radio]:checked:before {
     background-size: 14px 14px
 }
 
-
 /* FILE INPUT */
-
 
 /* ============ BUTTONS =========== */
 
