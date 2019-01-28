@@ -15,4 +15,3 @@ const initOptions = {
  const db = pgp(config)
 
  module.exports=db;
- 
