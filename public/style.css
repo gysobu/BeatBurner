@@ -37,7 +37,7 @@
 }
 
 .warm-up {
-    background-color: #eb6a2f;
+    background-color: #cf7348;
     width: 130px;
     height: 30px;
     color: white;
@@ -47,7 +47,7 @@
     letter-spacing: 1px;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 40px;
     margin-top: 10px;
     margin-left: 35px;
     justify-content: center;
@@ -56,7 +56,7 @@
 }
 
 .easy {
-    background-color: #27da5c;
+    background-color: #379b55;
     width: 130px;
     height: 30px;
     color: white;
@@ -66,7 +66,7 @@
     letter-spacing: 1px;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 40px;
     margin-top: 10px;
     margin-left: 35px;
     justify-content: center;
@@ -75,7 +75,7 @@
 }
 
 .medium {
-    background-color: #d7eb22;
+    background-color: #9ea83f;
     width: 130px;
     height: 30px;
     color: white;
@@ -85,7 +85,7 @@
     letter-spacing: 1px;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 40px;
     margin-top: 10px;
     margin-left: 35px;
     justify-content: center;
@@ -94,7 +94,7 @@
 }
 
 .hard {
-    background-color: #f31515;
+    background-color: #a83f3f;
     width: 130px;
     height: 30px;
     color: white;
@@ -104,7 +104,7 @@
     letter-spacing: 1px;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 40px;
     margin-top: 10px;
     margin-left: 35px;
     justify-content: center;
@@ -122,6 +122,25 @@
     margin-bottom: -30px;
 }
 
+/* Playlist.ejs css */
+.playlist {
+    table-layout: auto;
+    width: 100%;
+    color: white;
+    font-weight: 300;
+    font-size: 14px;
+    background-image: linear-gradient(rgb(151, 41, 165), rgb(25, 5, 73));
+    border-collapse: collapse;
+}
+
+td {
+    border-bottom: 1px solid rgb(182, 177, 177);
+}
+th {
+    border-bottom: 1px solid rgb(182, 177, 177);
+    color: rgb(182, 177, 177);
+    font-size: 10px;
+}
 
 .description {
     float: left;
@@ -145,7 +164,7 @@
 }
 
 form {
-    background: #fff;
+    background-image: linear-gradient(rgb(151, 41, 165), rgb(25, 5, 73));
     padding: 30px 20px;
     position: relative;
     width: 100%;
