@@ -1,0 +1,68 @@
+
+<!doctype html>
+<html lang="en-US">
+    
+<% include partials/head.ejs %>
+
+<body>
+    <div class="container">
+        <!-- Header Title -->
+        <header class="header">
+            <h1>Dashboard</h1>
+        </header>
+        <div class="content">
+            <div class="row">
+                <article class="col-md-9">
+                    <!-- Start Login Form -->
+                    <div class="row">
+                        <div class="col-md-6 offset-md-3">
+                            <form>
+                                <!-- Form Title -->
+                                <div class="total-calories-text">
+                                    Total Calories
+                                </div>
+                                <!-- USER INFO -->
+                                <div class="user-name">
+                                    USERNAME
+                                </div>
+                                <div class="user-age">
+                                    AGE
+                                </div>
+                                <!-- USER WEIGHT PROGRESS -->
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        START LBS
+                                    </div>
+                                    <div class="col-md-6">
+                                        CURRENT LBS
+                                    </div>
+                                </div>
+                                <!-- PLAYLIST OPTIONS -->
+                                <div class="col-md-10">
+                                    <div class="playlist-options">
+                                        <button class="warm-up">Warm Up</button>
+                                        <button class="easy">Easy</button>
+                                        <button class="medium">Medium</button>
+                                        <button class="hard">Hard</button>
+                                        <br>
+                                        <button type="button" onclick="location.href='/logout'">Log Out</button>
+                                        
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- End Login Form -->
+                </article>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+        <% include partials/scripts %>
+
+</body>
+
+</html>
