@@ -2,7 +2,7 @@
   "name": "beatburner",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/gysobu/BeatBurner.git"
   },
-  "author": "",
+  "author": "oscar",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/gysobu/BeatBurner/issues"
