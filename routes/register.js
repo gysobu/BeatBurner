@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 var bcrypt = require('bcryptjs');
 
 
-router.get('/',(req,res)=>{
+router.get('/register',(req,res)=>{
     res.render('register')
 });
 
@@ -18,7 +18,7 @@ router.post('/register',(req,res)=>{
     
     db.user.create({username: req.body.username, password:password, age:req.body.age, weight:req.body.weight, gender:req.body.gender})
     .then(()=>{
-        res.redirect('/login')
+        res.redirect('/')
     })
 });
 

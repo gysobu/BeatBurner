@@ -47,7 +47,7 @@ router.use(cookieParser());
 router.use(passport.initialize())
 router.use(passport.session());
 
-router.get('/login',(req,res)=>{
+router.get('/',(req,res)=>{
     res.render('login')
 });
 
@@ -81,8 +81,8 @@ passport.use(new LocalStrategy((username, password, done)=>{
     }
 ));
 
-router.post('/login', passport.authenticate('local', {successRedirect: '/dashboard',
-                                                        failureRedirect: '/login'
+router.post('/', passport.authenticate('local', {successRedirect: '/dashboard',
+                                                        failureRedirect: '/'
                                                         }))
 
 passport.serializeUser((user, done)=>{
