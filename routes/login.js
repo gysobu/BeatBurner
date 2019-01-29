@@ -51,11 +51,6 @@ router.get('/',(req,res)=>{
     res.render('login')
 });
 
-
-
-
-
-
 passport.use(new LocalStrategy((username, password, done)=>{
         db.user.findAll({where: {username:username}})
         .then((result)=>{
