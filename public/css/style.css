@@ -8,6 +8,141 @@
     box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 }
 
+/* Dashboard.ejs CSS */
+
+.total-calories-text {
+    margin-top: -80px;
+    margin-left: 50px;
+    padding: 20px;
+    background: #eb6a2f;
+    color: #fff;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+}
+
+.user-name {
+    justify-content: center;
+    display: flex;
+}
+
+.user-age {
+    justify-content: center;
+    display: flex;
+}
+
+.warm-up {
+    background-color: #cf7348;
+    width: 130px;
+    height: 30px;
+    color: white;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+    margin-top: 10px;
+    margin-left: 35px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.easy {
+    background-color: #379b55;
+    width: 130px;
+    height: 30px;
+    color: white;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+    margin-top: 10px;
+    margin-left: 35px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.medium {
+    background-color: #9ea83f;
+    width: 130px;
+    height: 30px;
+    color: white;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    border-radius:40px;
+    margin-top: 10px;
+    margin-left: 35px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.hard {
+    background-color: #a83f3f;
+    width: 130px;
+    height: 30px;
+    color: white;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+    margin-top: 10px;
+    margin-left: 35px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.block-display warm-up .block-display easy .block-display medium .block-display hard{
+    margin-bottom: 5px;
+    display: block;
+}
+
+.block-display {
+    margin-top: 40px;
+    margin-bottom: -30px;
+}
+
+/* Playlist.ejs css */
+.playlist {
+    table-layout: auto;
+    width: 100%;
+    color: white;
+    font-weight: 300;
+    font-size: 14px;
+    background-image: linear-gradient(rgb(151, 41, 165), rgb(25, 5, 73));
+    border-collapse: collapse;
+}
+
+td {
+    border-bottom: 1px solid rgb(182, 177, 177);
+}
+th {
+    border-bottom: 1px solid rgb(182, 177, 177);
+    color: rgb(182, 177, 177);
+    font-size: 10px;
+}
+
+
 
 .description {
     float: left;
