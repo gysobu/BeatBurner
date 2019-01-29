@@ -1,5 +1,6 @@
+DROP TABLE users;
+DROP TABLE register;
 
--- DROP TABLE users,difficulty,music,register;
 
 -- DROP TABLE users;
 -- DROP TABLE music;
@@ -17,15 +18,15 @@
 -- difficulty VARCHAR(20)
 -- );
 
-CREATE TABLE music(
-    id SERIAL PRIMARY KEY,
-    difficultyID INTEGER REFERENCES difficulty(id),
-    title VARCHAR(90),
-    bpm INTEGER,
-    artistName VARCHAR(20),
-    calories REAL,
-    duration NUMERIC
-);
+-- CREATE TABLE music(
+--     id SERIAL PRIMARY KEY,
+--     difficultyID INTEGER REFERENCES difficulty(id),
+--     title VARCHAR(90),
+--     bpm INTEGER,
+--     artistName VARCHAR(20),
+--     calories REAL,
+--     duration NUMERIC
+-- );
 
 -- CREATE TABLE register(
 --     sid INTEGER,
@@ -33,4 +34,4 @@ CREATE TABLE music(
 --     passcode VARCHAR
 -- );
 
- COPY music(id,difficultyID,title,bpm,artistName,calories,duration) FROM '/Users/sobha/BeatBurner/public/music.csv' DELIMITER ',' CSV HEADER;
+-- COPY music(id,difficultyID,title,bpm,artistName,calories,duration) FROM '/Users/voyager1/Documents/DigitalCrafts/beatburner/public/music.csv' DELIMITER ',' CSV HEADER;
