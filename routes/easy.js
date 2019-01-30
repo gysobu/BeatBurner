@@ -87,6 +87,7 @@ router.get('/easy',(req,res)=>{
 
 
 
+console.log(caloriesPerSong)
 
             res.render('easy', {
                 easyplaylist: results,

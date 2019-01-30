@@ -21,7 +21,7 @@
 
 <body>
     <div class="containerPlaylist" style="overflow-y: scroll; height:400px">
-            <button type="button" onclick="location.href='/dashboard'" class="dashboard"> Dashboard </button>
+        <button type="button" onclick="location.href='/dashboard'" class="dashboard"> Dashboard </button>
         <!-- Header Title -->
         <header class="headerEasy">
             <p>Easy</p>
@@ -34,7 +34,7 @@
                         <th>ARTIST</th>
                         <th>DURATION</th>
                         <th>BPM</th>
-                        <!-- <th>CALORIES</th> -->
+                        <th>CALORIES</th>
                     </tr>
                     <% easyplaylist.forEach((element)=>{%>
                     <tr>
@@ -50,12 +50,16 @@
                         <td style="text-align: center">
                             <%= element.bpm %>
                         </td>
-                        <!-- <td style="text-align: center">46</td> -->
+                        <td style="text-align: center">
+                            <% caloriesPerSong.forEach((value)=>{ %>
+                            <%= value %>
+                            <!-- <% }) %> -->
+                        </td>
+                        <% }) %>
                     </tr>
-                    <% }) %>
                 </table>
             </div>
-            <div class="col-2" style="padding-left: 0px; padding-right: 100px;"> 
+            <!-- <div class="col-2" style="padding-left: 0px; padding-right: 100px;"> 
                 <table class="playlist" style="margin-left:30px; margin-right: 30px; width: 40px;">
                     <tr>
                         <th class="caloriesTable">CALORIES</th>
@@ -68,7 +72,7 @@
                         <% }) %>
                     </tr>
                 </table>
-            </div>
+            </div> -->
         </div>
 
         <div class="row">
