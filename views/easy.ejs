@@ -4,12 +4,12 @@
 <% include partials/head.ejs %>
 
 <body>
-    <div class="container">
+    <div class="containerPlaylist" style="overflow-y: scroll; height:400px">
         <!-- Header Title -->
-        <header class="header">
-            <h1>Playlist</h1>
+        <header class="headerEasy">
+            <p>Easy</p>
         </header>
-        <table class="playlist d-inline-block float-left">
+        <table class="playlist ">
             <tr>
                 <th>TITLE</th>
                 <th>ARTIST</th>
@@ -31,25 +31,61 @@
                     <%= element.bpm %>
                 </td>
             </tr>
-            <% }) %>
-        </table>
+            <% }) %> 
+        <div class="row">
+            <div class="col">
+                <table class="playlist">
+                    <tr style="text-align: center">
+                        <th>TITLE</th>
+                        <th>ARTIST</th>
+                        <th>DURATION</th>
+                        <th>BPM</th>
+                        <!-- <th>CALORIES</th> -->
+                    </tr>
+                    <% easyplaylist.forEach((element)=>{%>
+                    <tr>
+                        <td>
+                            <%= element.title %>
+                        </td>
+                        <td style="text-align: center">
+                            <%= element.artistname %>
+                        </td>
+                        <td style="text-align: center">
+                            <%= element.duration %>
+                        </td>
+                        <td style="text-align: center">
+                            <%= element.bpm %>
+                        </td>
+                        <!-- <td style="text-align: center">46</td> -->
+                    </tr>
+                    <% }) %>
+                </table>
+            </div>
+            <div class="col-2">
+                <table class="playlist">
+                    <tr>
+                        <th style="text-align: center">CALORIES</th>
+                    </tr>
+                    <% caloriesPerSong.forEach((index, value)=>{ %>
+                    <tr>
+                        <td style="text-align: center">
+                            <%= index %>
+                        </td>
+                        <% }) %>
+                    </tr>
+                </table>
+                <%= totalCalories %>
+            </div>
+        </div>
 
-        <table class="playlist d-inline-block float-left">
-            <tr>
-                <th>CALORIES</th>
-            </tr>
-            <% caloriesPerSong.forEach((index, value)=>{ %>
-            <tr>
-                <td>
-                    <%= index %>
-                </td>
-                <% }) %>
-            </tr>
-        </table>
-
-        <%= totalCalories %>
-
+        <div class="row">
+            <div class="col-md-12" style="margin-bottom: 20px;">
+                <button class="easyButton" onclick=" window.open('https://open.spotify.com/playlist/3z1O1cHDYZeRPDOGboJuaM','_blank')">
+                    PLAY</button>
+            </div>
+        </div>
     </div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

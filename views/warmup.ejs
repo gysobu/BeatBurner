@@ -4,10 +4,10 @@
 <% include partials/head.ejs %>
 
 <body>
-    <div class="container">
-        <!-- Header Title -->
-        <header class="header">
-            <h1>Playlist</h1>
+    <!-- Header Title -->
+    <div class="containerPlaylist" style="overflow-y: scroll; height:400px">
+        <header class="headerWarmup">
+            <p>Warm Up</p>
         </header>
         <table class="playlist">
             <tr>
@@ -31,16 +31,21 @@
                 <td>
                     <%= element.bpm %>
                 </td>
-                <td>46</td>
+                <td style="text-align: center">46</td>
             </tr>
             <% }) %>
         </table>
+        <div class="row">
+                <div class="col-md-12" style="margin-bottom: 20px;">
+                <button class="warmUpButton" onclick=" window.open('https://open.spotify.com/playlist/1pkRyS9BK5ktJB89uQNtWp','_blank')">
+                    PLAY</button>
+            </div>
+        </div>
     </div>
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <% include partials/scripts.js %>
+    <% include partials/scripts.ejs %>
 
 </body>
 

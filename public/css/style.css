@@ -9,6 +9,11 @@
 }
 
 /* Dashboard.ejs CSS */
+.spinner{
+    
+    margin-left: 210px;
+    margin-top: -80px;
+}
 
 .total-calories-text {
     margin-top: -80px;
@@ -54,7 +59,9 @@
     text-align: center;
     align-items: center;
 }
-
+.easydisplay{
+    background-image: linear-gradient(rgb(151, 41, 165), rgb(25, 5, 73));
+}
 .easy {
     background-color: #379b55;
     width: 130px;

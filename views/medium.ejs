@@ -4,13 +4,13 @@
 <% include partials/head.ejs %>
 
 <body>
-    <div class="container">
+        <div class="containerPlaylist" style="overflow-y: scroll; height:400px">
         <!-- Header Title -->
-        <header class="header">
-            <h1>Playlist</h1>
+        <header class="headerMedium">
+            <p>Medium</p>
         </header>
         <table class="playlist">
-            <tr>
+            <tr style="text-align: center">
                 <th>TITLE</th>
                 <th>ARTIST</th>
                 <th>DURATION</th>
@@ -35,7 +35,7 @@
             <% }) %>
         </table>
 
-        <table class="playlist d-inline-block float-left">
+        <table class="playlist">
             <tr>
                 <th>CALORIES</th>
             </tr>
@@ -49,7 +49,15 @@
         </table>
 
         <%= totalCalories %>
+
+        <div class="row">
+                <div class="col-md-12" style="margin-bottom: 20px;">
+                <button class="mediumButton" onclick=" window.open('https://open.spotify.com/playlist/7pINDdovFr890SmNhZ1VU2','_blank')">
+                    PLAY</button>
+            </div>
+        </div>
     </div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
