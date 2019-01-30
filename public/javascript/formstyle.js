@@ -31,3 +31,28 @@ if (inputs) {
         }
     }
 }
+
+// Play button redirect opens in a new tab
+//Warm up
+window.open(
+    'https://open.spotify.com/playlist/1pkRyS9BK5ktJB89uQNtWp',
+    '_blank' // <- This is what makes it open in a new window.
+);
+
+//Easy
+window.open(
+    'https://open.spotify.com/playlist/3z1O1cHDYZeRPDOGboJuaM',
+    '_blank' // <- This is what makes it open in a new window.
+);
+
+//Medium
+window.open(
+    'https://open.spotify.com/playlist/7pINDdovFr890SmNhZ1VU2',
+    '_blank' // <- This is what makes it open in a new window.
+);
+
+//Hard
+window.open(
+    'https://open.spotify.com/playlist/7m5krTPyW1PkDR2cfhHFj9',
+    '_blank' // <- This is what makes it open in a new window.
+);
