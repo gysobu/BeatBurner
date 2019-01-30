@@ -2,7 +2,7 @@
   "development": {
     "username": "postgres",
     "password": null,
-    "database": "beatburner",
+    "database": "burnify",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }

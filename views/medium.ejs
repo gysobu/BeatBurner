@@ -39,25 +39,21 @@
                 <td><%= element.artistname %></td>
                 <td><%= element.duration %></td>
                 <td><%= element.bpm %></td>
-                <td>46</td>
+                
             </tr>
-            <% }) %> 
-
-            <!-- <tr>
-                <td>1998 TRUMAN</td>
-                <td>BROCKHAMPTON</td>
-                <td>4:05</td>
-                <td>135</td>
-                <td>32</td>
-            </tr>
-            <tr>
-                <td>Jumpman</td>
-                <td>Drake</td>
-                <td>3:25</td>
-                <td>142</td>
-                <td>38</td>
-            </tr> -->
+            <% }) %>
         </table>
+        <table class="playlist d-inline-block float-left">  
+            <tr>
+                <th>CALORIES</th>
+            </tr>
+            <% caloriesPerSong.forEach((index, value)=>{ %>
+            <tr>
+                <td><%= index %></td><% }) %>
+            </tr>
+        </table>
+
+        <%= totalCalories %>
     </div>
     
 
