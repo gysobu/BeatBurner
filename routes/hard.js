@@ -60,7 +60,8 @@ router.get('/hard', (req, res) => {
 
             var totalCalc = ((arr) => {
                 return arr.reduce((a, b) => {
-                    return a + b
+                    var total = a + b
+                    return Math.round(total * 1e2) / 1e2
                 }, 0)
             })
 
