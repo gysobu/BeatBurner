@@ -16,6 +16,7 @@ router.post('/register',(req,res)=>{
 
     let password = bcrypt.hashSync(req.body.password,8)
     
+    
     db.user.create({username: req.body.username, password:password, age:req.body.age, weight:req.body.weight, gender:req.body.gender})
     .then(()=>{
         res.redirect('/')

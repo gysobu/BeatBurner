@@ -18,23 +18,29 @@
                         <div class="col-md-6 offset-md-3">
                             <form>
                                 <!-- Form Title -->
-                                <div class="total-calories-text">
+                               <span> <div class="total-calories-text">
                                     Total Calories
                                 </div>
+                               <a href="/update"><i class="fa fa-gear fa-spin spinner" style="font-size:130px;color:green"></i> </a>
+                            </span>
                                 <!-- USER INFO -->
                                 <div class="user-name">
-                                    USERNAME
+                                    USERNAME:
+                                    <%= username %>
                                 </div>
                                 <div class="user-age">
-                                    AGE
+                                    AGE:
+                                    <%= userage %>
                                 </div>
                                 <!-- USER WEIGHT PROGRESS -->
                                 <div class="row">
                                     <div class="col-md-6">
-                                        START LBS
+                                        START LBS:
+                                        <%= userweight %>
                                     </div>
                                     <div class="col-md-6">
-                                        CURRENT LBS
+                                        CURRENT LBS:
+                                        <%= userweight %>
                                     </div>
                                 </div>
                                 <!-- PLAYLIST OPTIONS -->
@@ -44,6 +50,7 @@
                                         <button type="button" onclick="location.href='/easy'" class="easy">Easy</button>
                                         <button type="button" onclick="location.href='/medium'" class="medium">Medium</button>
                                         <button type="button" onclick="location.href='/hard'" class="hard">Hard</button>
+                                        <br>
                                         <br>
                                         <button type="button" onclick="location.href='/logout'">Log Out</button>
                                         
