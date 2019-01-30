@@ -1,13 +1,17 @@
 DROP TABLE users;
+DROP TABLE register;
 
-CREATE TABLE users(
-    id SERIAL PRIMARY KEY,
-    firstName VARCHAR(20),
-    lastName VARCHAR(20),
-    gender VARCHAR(2),
-    weight REAL,
-    age INTEGER
-);
+
+-- DROP TABLE users;
+-- DROP TABLE music;
+-- CREATE TABLE users(
+--     id SERIAL PRIMARY KEY,
+--     firstName VARCHAR(20),
+--     lastName VARCHAR(20),
+--     gender VARCHAR(2),
+--     weight REAL,
+--     age INTEGER
+-- );
 
 -- CREATE TABLE difficulty(
 -- id SERIAL PRIMARY KEY,

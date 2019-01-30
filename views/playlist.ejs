@@ -16,46 +16,49 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
         crossorigin="anonymous" />
     <!-- Form style -->
-    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 
 <body>
-    <div class="containerPlaylist">
-        <!-- Header Title -->
-        <header class="header">
-            <h1>Playlist</h1>
-        </header>
+    <!-- Header Title -->
+    <div class="containerPlaylist" style="overflow-y: scroll; height:400px">
+            <header class="headerPlaylist">
+                    <p>Playlist</p>
+                </header>
+
         <table class="playlist">
-            <tr>
-                <th>TITLE</th>
-                <th>ARTIST</th>
-                <th>DURATION</th>
-                <th>BPM</th>
-                <th>CALORIES</th>
-            </tr>
-            <tr>
-                <td>SICKO MODE</td>
-                <td>Travis Scott</td>
-                <td>5:12</td>
-                <td>155</td>
-                <td>46</td>
-            </tr>
-            <tr>
-                <td>1998 TRUMAN</td>
-                <td>BROCKHAMPTON</td>
-                <td>4:05</td>
-                <td>135</td>
-                <td>32</td>
-            </tr>
-            <tr>
-                <td>Jumpman</td>
-                <td>Drake</td>
-                <td>3:25</td>
-                <td>142</td>
-                <td>38</td>
-            </tr>
+                <tr>
+                    <th>TITLE</th>
+                    <th>ARTIST</th>
+                    <th>DURATION</th>
+                    <th>BPM</th>
+                    <th>CALORIES</th>
+                </tr>
+            <% playlists.forEach((element)=>{%>
+                <tr>
+                    <td>
+                        <%= element.title %>
+                    </td>
+                    <td>
+                        <%= element.artistname %>
+                    </td>
+                    <td>
+                        <%= element.duration %>
+                    </td>
+                    <td>
+                        <%= element.bpm %>
+                    </td>
+                    <td style="text-align: center">46</td>
+                </tr>
+                <% }) %>
         </table>
+    <div class="row">
+        <div class="col-md-12" style="margin-bottom: 20px;">
+            <button class="playlistButton" onclick=" window.open('https://open.spotify.com/playlist/1pkRyS9BK5ktJB89uQNtWp','_blank')">
+                PLAY</button>
+        </div>
     </div>
+</div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
