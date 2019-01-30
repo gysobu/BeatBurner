@@ -9,41 +9,50 @@
         <header class="header">
             <h1>Playlist</h1>
         </header>
-        <table class="playlist d-inline-block float-left" >
+        <table class="playlist d-inline-block float-left">
             <tr>
                 <th>TITLE</th>
                 <th>ARTIST</th>
                 <th>DURATION</th>
                 <th>BPM</th>
             </tr>
-            <% easyplaylist.forEach((element)=>{%>      
+            <% easyplaylist.forEach((element)=>{%>
             <tr>
-                <td><%= element.title %></td>
-                <td><%= element.artistname %></td>
-                <td><%= element.duration %></td>
-                <td><%= element.bpm %></td>
-                    
+                <td>
+                    <%= element.title %>
+                </td>
+                <td>
+                    <%= element.artistname %>
+                </td>
+                <td>
+                    <%= element.duration %>
+                </td>
+                <td>
+                    <%= element.bpm %>
+                </td>
             </tr>
-            <% }) %> 
+            <% }) %>
         </table>
-        <table class="playlist d-inline-block float-left">  
+
+        <table class="playlist d-inline-block float-left">
             <tr>
                 <th>CALORIES</th>
             </tr>
             <% caloriesPerSong.forEach((index, value)=>{ %>
             <tr>
-                <td><%= index %></td><% }) %>
+                <td>
+                    <%= index %>
+                </td>
+                <% }) %>
             </tr>
         </table>
 
         <%= totalCalories %>
 
     </div>
-    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
     <% include partials/scripts.ejs %>
 
 </body>
