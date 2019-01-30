@@ -20,39 +20,59 @@
 </head>
 
 <body>
-        <div class="containerPlaylist" style="overflow-y: scroll; height:400px">
+    <div class="containerPlaylist" style="overflow-y: scroll; height:400px">
+            <button type="button" onclick="location.href='/dashboard'" class="dashboard"> Dashboard </button>
         <!-- Header Title -->
         <header class="headerMedium">
             <p>Medium</p>
         </header>
-        <table class="playlist">
-            <tr style="text-align: center">
-                <th>TITLE</th>
-                <th>ARTIST</th>
-                <th>DURATION</th>
-                <th>BPM</th>
-                <th>CALORIES</th>
-            </tr>
-            <% mediumplaylist.forEach((element)=>{%>
-            <tr>
-                <td>
-                    <%= element.title %>
-                </td>
-                <td style="text-align: center">
-                    <%= element.artistname %>
-                </td>
-                <td style="text-align: center">
-                    <%= element.duration %>
-                </td>
-                <td style="text-align: center">
-                    <%= element.bpm %>
-                </td>
-                <td style="text-align: center">46</td>
-            </tr>
-            <% }) %>
-        </table>
         <div class="row">
-                <div class="col-md-12" style="margin-bottom: 20px;">
+            <div class="col">
+                <table class="playlist">
+                    <tr style="text-align: center">
+                        <th>TITLE</th>
+                        <th>ARTIST</th>
+                        <th>DURATION</th>
+                        <th>BPM</th>
+                        <!-- <th>CALORIES</th> -->
+                    </tr>
+                    <% mediumplaylist.forEach((element)=>{%>
+                    <tr>
+                        <td>
+                            <%= element.title %>
+                        </td>
+                        <td style="text-align: center">
+                            <%= element.artistname %>
+                        </td>
+                        <td style="text-align: center">
+                            <%= element.duration %>
+                        </td>
+                        <td style="text-align: center">
+                            <%= element.bpm %>
+                        </td>
+                        <!-- <td style="text-align: center">46</td> -->
+                    </tr>
+                    <% }) %>
+                </table>
+            </div>
+            <div class="col-2" style="padding-left: 0px; padding-right: 100px;">
+                <table class="playlist" style="margin-left:30px; margin-right: 30px; width: 40px;">
+                    <tr>
+                        <th class="caloriesTable">CALORIES</th>
+                    </tr>
+                    <% caloriesPerSong.forEach((index, value)=>{ %>
+                    <tr>
+                        <td class="caloriesTable2">
+                            <%= index %>
+                        </td>
+                        <% }) %>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12" style="margin-bottom: 20px;">
                 <button class="mediumButton" onclick=" window.open('https://open.spotify.com/playlist/7pINDdovFr890SmNhZ1VU2','_blank')">
                     PLAY</button>
             </div>
