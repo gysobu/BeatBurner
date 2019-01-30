@@ -1,8 +1,9 @@
 var express =require('express')
 var router =express.Router();
-var db=require('../model/database.js')
+// var db = require('../models/');
+var dbs=require('../models/modelsql/database.js')
 router.get('/playlist',(req,res)=>{
-    db.any('SELECT * FROM music')
+    dbs.any('SELECT * FROM music')
     .then((results)=>{
         res.render('playlist',{
           playlists:results
