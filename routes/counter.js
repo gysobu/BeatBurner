@@ -17,4 +17,6 @@ function calCount() {
     //FEMALE
     return ((0.074 * age2 - 0.1263 * (0.45359237 * 130) + 0.4472 * fbz2 - 20.4022) * 5 / 4.184);
 };
+//converts it up to 2 decimals point
 Math.round(calCount() * 1e2 ) / 1e2;
+
