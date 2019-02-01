@@ -1,8 +1,8 @@
 
 var weight = 150;
 var avgAge = 22;
-var fbz1 = 122
-var songInMin = 4.1
+var fbz1 = 140
+var songInMin = 3.85
 
 
 function male(age, userWeight, fbz, duration){

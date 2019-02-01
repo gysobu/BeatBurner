@@ -5,6 +5,7 @@ var dbs = require('../models/modelsql/database.js')
 router.get('/medium', (req, res) => {
     dbs.any("select music.* from music inner join difficulty on music.difficultyid=difficulty.id and difficulty.difficulty='medium'")
         .then((results) => {
+            
             var age = req.user.age;
             var userWeight = req.user.weight;
 
@@ -13,6 +14,7 @@ router.get('/medium', (req, res) => {
             var caloriesPerSong;
 
             results.forEach((song) => {
+                
                 songDurArr.push(song.duration)
             })
 
@@ -64,7 +66,7 @@ router.get('/medium', (req, res) => {
                     return Math.round(total * 1e2) / 1e2
                 }, 0)
             })
-
+            
             maleCalPerSong()
 
             var totalCalories = totalCalc(arrayofcalories)

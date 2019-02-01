@@ -16,7 +16,6 @@ app.use(require('./routes/warmup'));
 app.use(require('./routes/easy'));
 app.use(require('./routes/medium'));
 app.use(require('./routes/hard'));
-app.use(require('./routes/updateprofile'));
 app.listen(3000, ()=>{
     console.log('Beat Burner coming soon!');
 });

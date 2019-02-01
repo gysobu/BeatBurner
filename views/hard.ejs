@@ -4,58 +4,58 @@
 <% include partials/head.ejs %>
 
 <body>
-        <div class="containerPlaylist" style="overflow-y: scroll; height:400px">
+    <div class="containerPlaylist" style="overflow-y: scroll; height:400px">
+            <button type="button" onclick="location.href='/dashboard'" class="dashboard"> Dashboard </button>
         <!-- Header Title -->
-        <header class="headerHard">
+        <header class="headerMedium">
             <p>Hard</p>
         </header>
-        <table class="playlist">
-            <tr style="text-align: center">
-                <th>TITLE</th>
-                <th>ARTIST</th>
-                <th>DURATION</th>
-                <th>BPM</th>
-                <th>CALORIES</th>
-            </tr>
-            <% hardplaylist.forEach((element)=>{%>
-            <tr>
-                <td>
-                    <%= element.title %>
-                </td>
-                <td>
-                    <%= element.artistname %>
-                </td>
-                <td>
-                    <%= element.duration %>
-                </td>
-                <td>
-                    <%= element.bpm %>
-                </td>
-            </tr>
-            <% }) %>
-        </table>
 
-        <table class="playlist">
-            <tr>
-                <th>CALORIES</th>
-            </tr>
-            <% caloriesPerSong.forEach((index, value)=>{ %>
-            <tr>
-                <td>
-                    <%= index %>
-                </td>
-                <% }) %>
-            </tr>
-        </table>
-
-        <%= totalCalories %>
+<h1 style="color: white;"><%= totalCalories %></h1>
+        <div class="row">
+            <div class="col">
+                <table class="playlist">
+                    <tr style="text-align: center">
+                        <th>TITLE</th>
+                        <th>ARTIST</th>
+                        <th>DURATION</th>
+                        <th>BPM</th>
+                        <th>CALORIES</th>
+                    </tr>
+                    <% var index = 0; %>
+                    <% hardplaylist.forEach((element)=>{%>
+                        
+                    <tr>
+                        <td>
+                            <%= element.title %>
+                        </td>
+                        <td style="text-align: center">
+                            <%= element.artistname %>
+                        </td>
+                        <td style="text-align: center">
+                            <%= element.duration %>
+                        </td>
+                        <td style="text-align: center">
+                            <%= element.bpm %>
+                        </td>
+                        <td style="text-align: center">
+                            <%= caloriesPerSong[index] %>    
+                        </td>
+                        <% index++ %>
+                        <% }) %>
+                    </tr>
+                    
+                </table>
+            </div>
+        </div>
 
         <div class="row">
             <div class="col-md-12" style="margin-bottom: 20px;">
-                <button class="hardButton" onclick=" window.open('https://open.spotify.com/playlist/7m5krTPyW1PkDR2cfhHFj9','_blank')">
+                <button class="mediumButton" onclick=" window.open('https://open.spotify.com/playlist/7m5krTPyW1PkDR2cfhHFj9','_blank')">
                     PLAY</button>
             </div>
         </div>
+        
     </div>
 
 
@@ -65,3 +65,5 @@
 
 </body>
 </html>
+
+
