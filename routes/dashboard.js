@@ -9,7 +9,16 @@ router.get('/dashboard',(req,res)=>{
     }
 
     console.log(req.user.id)
-    res.render('dashboard')
+    var name=req.user.username;
+    var age=req.user.age;
+    var weight=req.user.weight;
+    var currentweight=req.user.weight-10
+    res.render('dashboard',{
+      name:name,
+      weight:weight,
+      age:age,
+      cweight:currentweight
+    })
 })
 
 
