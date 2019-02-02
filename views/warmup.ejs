@@ -6,43 +6,43 @@
 <body>
     <!-- Header Title -->
     <div class="containerPlaylist" style="overflow-y: scroll; height:400px">
-            <button type="button" onclick="location.href='/dashboard'" class="dashboard"> Dashboard </button>
-            <!-- Header Title -->
-            <header class="headerWarmup">
-                <p>Warm Up</p>
-            </header>
-            <div class="row">
-                <div class="col-11">
-                    <table class="playlist">
-                        <tr style="text-align: center">
-                            <th>TITLE</th>
-                            <th>ARTIST</th>
-                            <th>DURATION</th>
-                            <th>BPM</th>
-                            <!-- <th>CALORIES</th> -->
-                        </tr>
-                        <% warmupplaylist.forEach((element)=>{%>
-                        <tr>
-                            <td>
-                                <%= element.title %>
-                            </td>
-                            <td style="text-align: center">
-                                <%= element.artistname %>
-                            </td>
-                            <td style="text-align: center">
-                                <%= element.duration %>
-                            </td>
-                            <td style="text-align: center">
-                                <%= element.bpm %>
-                            </td>
-                            <!-- <td style="text-align: center">46</td> -->
-                        </tr>
-                        <% }) %>
-                    </table>
-                </div>
+        <button type="button" onclick="location.href='/dashboard'" class="dashboard"> Dashboard </button>
+        <!-- Header Title -->
+        <header class="headerWarmup">
+            <p style="font-weight: 300;">Warm Up</p>
+        </header>
+        <div class="col-11 playlistBorder">
+            <div class="col-11" style="margin-top: 15px; margin-bottom: 15px;">
+                <table class="playlist">
+                    <tr style="text-align: center">
+                        <th>TITLE</th>
+                        <th>ARTIST</th>
+                        <th>DURATION</th>
+                        <th>BPM</th>
+                        <!-- <th>CALORIES</th> -->
+                    </tr>
+                    <% warmupplaylist.forEach((element)=>{%>
+                    <tr>
+                        <td>
+                            <%= element.title %>
+                        </td>
+                        <td style="text-align: center">
+                            <%= element.artistname %>
+                        </td>
+                        <td style="text-align: center">
+                            <%= element.duration %>
+                        </td>
+                        <td style="text-align: center">
+                            <%= element.bpm %>
+                        </td>
+                        <!-- <td style="text-align: center">46</td> -->
+                    </tr>
+                    <% }) %>
+                </table>
             </div>
+        </div>
         <div class="row">
-                <div class="col-md-12" style="margin-bottom: 20px;">
+            <div class="col-md-12" style="margin-top: 20px; margin-bottom: 20px;">
                 <button class="warmUpButton" onclick=" window.open('https://open.spotify.com/playlist/1pkRyS9BK5ktJB89uQNtWp','_blank')">
                     PLAY</button>
             </div>

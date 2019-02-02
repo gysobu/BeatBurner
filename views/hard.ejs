@@ -5,15 +5,19 @@
 
 <body>
     <div class="containerPlaylist" style="overflow-y: scroll; height:400px">
-            <button type="button" onclick="location.href='/dashboard'" class="dashboard"> Dashboard </button>
+        <button type="button" onclick="location.href='/dashboard'" class="dashboard"> Dashboard </button>
         <!-- Header Title -->
-        <header class="headerMedium">
-            <p>Hard</p>
+        <header class="headerHard">
+            <p style="font-weight: 300;">Hard</p>
         </header>
-
-<h1 style="color: white;"><%= totalCalories %></h1>
-        <div class="row">
-            <div class="col">
+        <div class="row" style="justify-content: center; margin-bottom: 30px;">
+            <h1 style="color: #eb6a2f; font-weight: 300;">
+                <%= totalCalories %>
+                cal
+            </h1>
+        </div>
+        <div class="col-11 playlistBorder">
+            <div class="col-11" style="margin-top: 15px; margin-bottom: 15px;">
                 <table class="playlist">
                     <tr style="text-align: center">
                         <th>TITLE</th>
@@ -24,7 +28,7 @@
                     </tr>
                     <% var index = 0; %>
                     <% hardplaylist.forEach((element)=>{%>
-                        
+
                     <tr>
                         <td>
                             <%= element.title %>
@@ -39,19 +43,20 @@
                             <%= element.bpm %>
                         </td>
                         <td style="text-align: center">
-                            <%= caloriesPerSong[index] %>    
+                            <%= caloriesPerSong[index] %>
                         </td>
                         <% index++ %>
                         <% }) %>
                     </tr>
-                    
+
                 </table>
             </div>
         </div>
 
+
         <div class="row">
-            <div class="col-md-12" style="margin-bottom: 20px;">
-                <button class="mediumButton" onclick=" window.open('https://open.spotify.com/playlist/7m5krTPyW1PkDR2cfhHFj9','_blank')">
+            <div class="col-md-12" style="margin-top: 20px; margin-bottom: 20px;">
+                <button class="hardButton" onclick=" window.open('https://open.spotify.com/playlist/7m5krTPyW1PkDR2cfhHFj9','_blank')">
                     PLAY</button>
             </div>
         </div>

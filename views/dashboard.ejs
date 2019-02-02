@@ -4,17 +4,19 @@
 <% include partials/head.ejs %>
 
 <body>
-    <div class="containerDashboard">
+    <div class="containerDashboard" style>
         <!-- Header Title -->
-        <header class="sideLogo">
-            <h1>Dashboard</h1>
-        </header>
+        <div class="row" style="height: 100px;">
+            <div class="sideLogo">Logo</div>
+        </div>
+
+        <div style="margin-top: -100px;">
             <div class="row" style="display: flex; justify-content: center">
                 <div class="total-calories-text">
-                    Total Calories
+                    3,000 Cal burned
                 </div>
             </div>
-                <!-- USER INFO -->
+            <!-- USER INFO -->
             <div class="row" style="display: flex; justify-content: center">
                 <div class="user-name">
                     USERNAME
@@ -25,29 +27,30 @@
                     AGE
                 </div>
             </div>
-                <!-- USER WEIGHT PROGRESS -->
-                <div class="row" style="display: flex; justify-content: center">
-                    <div class="col-md-1">
-                        START LBS
-                    </div>
-                    <div class="col-md-1">
-                        CURRENT LBS
-                    </div>
+            <!-- USER WEIGHT PROGRESS -->
+            <div class="row" style="display: flex; justify-content: center">
+                <div class="col-md-1">
+                    START LBS
                 </div>
-                <!-- PLAYLIST OPTIONS -->
-                <div class="col-md-12" style="display: flex; justify-content: center">
-                    <div class="playlist-options">
-                        <button type="button" onclick="location.href='/warmup'" class="warm-up">Warm Up</button>
-                        <button type="button" onclick="location.href='/easy'" class="easy">Easy</button>
-                        <button type="button" onclick="location.href='/medium'" class="medium">Medium</button>
-                        <button type="button" onclick="location.href='/hard'" class="hard">Hard</button>
-                        <br>
-                        <button type="button" onclick="location.href='/logout'" class="logout">Log Out</button>
+                <div class="col-md-1">
+                    CURRENT LBS
+                </div>
+            </div>
+            <!-- PLAYLIST OPTIONS -->
+            <div class="col-md-12" style="display: flex; justify-content: center">
+                <div class="playlist-options">
+                    <button type="button" onclick="location.href='/warmup'" class="warm-up">Warm Up</button>
+                    <button type="button" onclick="location.href='/easy'" class="easy">Easy</button>
+                    <button type="button" onclick="location.href='/medium'" class="medium">Medium</button>
+                    <button type="button" onclick="location.href='/hard'" class="hard">Hard</button>
+                    <br>
+                    <button type="button" onclick="location.href='/logout'" class="logout">Log Out</button>
 
-                    </div>
                 </div>
             </div>
         </div>
+    </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
