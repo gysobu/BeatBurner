@@ -3,8 +3,7 @@
 Burnify is a tool that assists users in burning calories via Spotify playlists curated by our team.
 <br>
 With a researched formula, the tool calculates a users maximum BPM needed to reach their FBZ (fat burning zone), a songs BPM,
-and gives them an estimated calorie count that they are expected to burn per song
-as well as the total burned if the playlist is completed.
+and provides the estimated calorie count that they are expected to burn per song and playlist.
 
 <div class="row">
   <h5>Login</h5>
