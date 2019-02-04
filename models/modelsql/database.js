@@ -6,7 +6,7 @@ const initOptions = {
  const config = {
      host: 'localhost',
      port: 5432,
-     database: 'beatburner',
+     database: 'burnify',
      user:'postgres'
  }
 
