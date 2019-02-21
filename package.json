@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node app.js"
-    },
+  },
   "author": "Oscar, John, Sobha",
   "license": "ISC",
   "dependencies": {
