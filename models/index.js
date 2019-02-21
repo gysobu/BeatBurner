@@ -2,9 +2,8 @@
 
 const fs = require('fs');
 const path = require('path');
-const Sequelize = require('sequelize'), sequelize = null
-const http = require('http');
-const basename = path.basename(__filename);
+var Sequelize = require('sequelize'), sequelize = null
+const http = require('http')
 const env = process.env.NODE_ENV || 'development';
 const config = require(__dirname + '/../config/config.json')[env];
 const db = {};
@@ -20,17 +19,6 @@ if (process.env.DATABASE_URL) {
 }
 
 
-// at the bottom of your script, this sets your server to listen for requests, after sequelize has been synced.
-// so if you already have your server listening for requests, maybe delete that code. I think, IDK i just copied this
-// off of documentation
-// db.  is assuming you already set sequelize on db
-db.sequelize.sync().then(function() {
-  http.createServer(app).listen(app.get('port'), function(){
-    console.log('Express server listening on port ' + app.get('port'));
-  });
-});
-
-let sequelize;
 if (config.use_env_variable) {
   sequelize = new Sequelize(process.env[config.use_env_variable], config);
 } else {
@@ -52,8 +40,21 @@ Object.keys(db).forEach(modelName => {
     db[modelName].associate(db);
   }
 });
-
+// at the bottom of your script, this sets your server to listen for requests, after sequelize has been synced.
+// so if you already have your server listening for requests, maybe delete that code. I think, IDK i just copied this
+// off of documentation
+// db.  is assuming you already set sequelize on db
+db.sequelize.sync().then(function() {
+  http.createServer(app).listen(app.get('port'), function(){
+    console.log('Express server listening on port ' + app.get('port'));
+  });
+});
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
 module.exports = db;
+
+
+
+
+
